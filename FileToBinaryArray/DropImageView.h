@@ -8,6 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface DropImageView : NSImageView
+@protocol DropImageViewDelegate
+- (void)dragFinished:(NSString *)filePath;
+@end
 
+@interface DropImageView : NSImageView
+{
+    BOOL highlight;
+    __unsafe_unretained id <DropImageViewDelegate> _delegate;
+}
+@property (unsafe_unretained)    id <DropImageViewDelegate> delegate;
 @end

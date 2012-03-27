@@ -7,17 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DropImageView.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
-{
-    dispatch_io_t _channel;
-}
+@interface AppDelegate : NSObject <NSApplicationDelegate,DropImageViewDelegate>
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSImageView *imageView;
+@property (assign) IBOutlet DropImageView *imageView;
 @property (assign) IBOutlet NSTextField *textField;
-@property (assign) dispatch_io_t channel;
 
 -(IBAction)createAction:(id)sender;
-- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender;
 @end

@@ -13,11 +13,10 @@
 @synthesize window = _window;
 @synthesize imageView = _imageView;
 @synthesize textField = _textField;
-@synthesize channel = _channel;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    [self.imageView registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
+    self.imageView.delegate = self;
 }
 -(IBAction)createAction:(id)sender
 {
@@ -40,17 +39,9 @@
     
     NSLog(@"%@",outString);
 }
-
-- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
+- (void)dragFinished:(NSString *)filePath
 {
-    NSPasteboard *pboard = [sender draggingPasteboard];
-    
-    if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
-        NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
-        int numberOfFiles = [files count];
-        // Perform operation using the list of files
-        NSLog(@"%d",numberOfFiles);
-    }
-    return YES;
+    self.textField.stringValue = filePath;
 }
+
 @end
