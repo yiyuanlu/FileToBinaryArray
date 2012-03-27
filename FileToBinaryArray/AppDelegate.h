@@ -10,6 +10,14 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+{
+    dispatch_io_t _channel;
+}
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSImageView *imageView;
+@property (assign) IBOutlet NSTextField *textField;
+@property (assign) dispatch_io_t channel;
 
+-(IBAction)createAction:(id)sender;
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender;
 @end

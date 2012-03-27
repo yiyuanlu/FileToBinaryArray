@@ -21,12 +21,12 @@
 		2C54F143151DC71800E643AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2C54F144151DC71800E643AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2C54F145151DC71800E643AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2C54F148151DC71800E643AA /* FileToBinaryArray-Info.plist */ = {isa = PBXFileReference; path = "FileToBinaryArray-Info.plist"; sourceTree = "<group>"; };
+		2C54F148151DC71800E643AA /* FileToBinaryArray-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FileToBinaryArray-Info.plist"; sourceTree = "<group>"; };
 		2C54F14A151DC71800E643AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C54F14C151DC71800E643AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2C54F14E151DC71800E643AA /* FileToBinaryArray-Prefix.pch */ = {isa = PBXFileReference; path = "FileToBinaryArray-Prefix.pch"; sourceTree = "<group>"; };
+		2C54F14E151DC71800E643AA /* FileToBinaryArray-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileToBinaryArray-Prefix.pch"; sourceTree = "<group>"; };
 		2C54F150151DC71800E643AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2C54F152151DC71800E643AA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C54F152151DC71800E643AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C54F153151DC71800E643AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2C54F156151DC71800E643AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,6 +253,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FileToBinaryArray/FileToBinaryArray-Prefix.pch";
 				INFOPLIST_FILE = "FileToBinaryArray/FileToBinaryArray-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -264,6 +265,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FileToBinaryArray/FileToBinaryArray-Prefix.pch";
 				INFOPLIST_FILE = "FileToBinaryArray/FileToBinaryArray-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
